@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+// import Popup from "./components/popup/popup";
+import LeftSetting from './components/leftSetting/leftSetting'
 
 function App() {
+  const [visibility, setVisibility] = useState(true);
+
+  const popupCloseHandler = (e) => {
+    setVisibility(e);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <LeftSetting />
+      {/* <button onClick={(e) => setVisibility(!visibility)}>Toggle Popup</button>
+     
+
+      {visibility && (
+        <Popup
+          onClose={popupCloseHandler}
+          show={visibility}
+          title="Hello Jeetendra"
         >
-          Learn React
-        </a>
-      </header>
+          <h1>Hello This is Popup Content Area</h1>
+          <h2>This is my lorem ipsum text here!</h2>
+        </Popup>
+      )} */}
     </div>
   );
 }

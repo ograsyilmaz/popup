@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+
+
+
+.leftSetting-titleFont {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+
+
+
+.leftSetting {
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    display: flex;
+    background-color: #FFFFFF;
+    padding-top: 81px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding-left: 65px;
+    padding-right: 65px;
+
+    &-Title h1 {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+
+        font-size: 24px;
+        line-height: 29px;
+        text-decoration-line: underline;
+        color: #000000;
+        text-underline-offset: 5px;
+        margin-bottom: 33px;
+    }
+
+    &-Form {
+
+        &-Item-Position {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+        }
+
+        &-Item-Title {
+            margin-bottom: 10px;
+        }
+
+        &-Item-Input {
+            width: 350px;
+            height: 48px;
+            border: 1px solid #D2DAE3;
+            border-radius: 8px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+            padding-top: 15px;
+            padding-bottom: 14px;
+            padding-left: 15px;
+            margin-bottom: 36px;
+        }
+    }
+
+
+}
+
+.InputBig {
+    width: 350px;
+    height: 103px;
+    resize: none
+}
