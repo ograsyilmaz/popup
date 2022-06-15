@@ -6,28 +6,34 @@ import { useSite } from "./context/SiteContext";
 
 function App() {
   const { modelShow, setModelShow } = useSite();
+  const { headline,description ,sucessMessage} = useSite();
+
 
   const popupCloseHandler = (e) => {
     setModelShow(e);
   };
   return (
     <div className="App">
-      {console.log(modelShow)}
-      <LeftSetting />
-      
+        <LeftSetting />
+     
+    
+
       {/* {/* <button onClick={(e) => setVisibility(!visibility)}>Toggle Popup</button> */}
-{modelShow}
+    
+      <div className="flowers">
       {modelShow && (
         <Popup
           onClose={popupCloseHandler}
           show={modelShow}
-          title="Hello Jeetendra"
+          title={headline}
+          description={description}
         >
-          <h1>Hello This is Popup Content Area</h1>
-          <h2>This is my lorem ipsum text here!</h2>
+         
+         
         </Popup>
       )}
- 
+      </div>
+      
     </div>
   );
 }
