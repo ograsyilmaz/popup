@@ -20,7 +20,13 @@ const useForm = (callback, validate) => {
     if (event) event.preventDefault();
     const errorData = validate(valueData);
     if (errorData.count === 0) {
+      // const localData = {
+      //   name: valueData.name,
+      //   email:valueData.email,
+      //   Font:valueData.fontName
+      // };
       setIsSubmitting(true);
+      localStorage.setItem("data", JSON.stringify(valueData));
     }
     validate(valueData);
     setErrors(validate(valueData));
