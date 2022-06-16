@@ -4,23 +4,19 @@ import Popup from "./components/popup/popup";
 import LeftSetting from "./components/leftSetting/leftSetting";
 import { useSite } from "./context/SiteContext";
 import Form from "./components/form/form";
+import SucessForm from "./components/form/SucessForm";
 
 function App() {
-  const { modelShow, setModelShow, data } = useSite();
+  const { modelShow, setModelShow, data, isSubmitting } = useSite();
   const { headline, description, sucessMessage } = useSite();
 
   const popupCloseHandler = (e) => {
     setModelShow(e);
   };
 
-
-
-
   return (
     <div className="App">
       <LeftSetting />
- 
-
 
       <div className="flowers">
         {modelShow && (
@@ -30,7 +26,8 @@ function App() {
             title={headline}
             description={description}
           >
-            <Form />
+            {!isSubmitting ? <Form /> : <SucessForm />}
+            {/* <Form/> */}
           </Popup>
         )}
       </div>

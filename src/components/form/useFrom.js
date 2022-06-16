@@ -18,8 +18,12 @@ const useForm = (callback, validate) => {
 
   const handleSubmit = (event) => {
     if (event) event.preventDefault();
+    const errorData = validate(valueData);
+    if (errorData.count === 0) {
+      setIsSubmitting(true);
+    }
+    validate(valueData);
     setErrors(validate(valueData));
-    setIsSubmitting(true);
   };
 
   const handleChange = (event) => {

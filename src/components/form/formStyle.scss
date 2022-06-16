@@ -1,0 +1,83 @@
+.form {
+    &-box {
+        &-field {
+            &-input {
+                width: 350px;
+                height: 41px;
+                border: none;
+                background-color: #EDEDED;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+
+                color: #000000;
+
+                padding-left: 13px;
+                padding-top: 11px;
+                padding-bottom: 11px;
+                margin-top: 15px;
+
+                &::placeholder {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: #000000;
+                }
+            }
+
+            &-submit {
+                width: 350px;
+                height: 41px;
+                background: #639105;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                text-align: center;
+                color: #FFFFFF;
+                border: none;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &-sucess {
+        &p {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 64px;
+            line-height: 77px;
+
+            color: #000000;
+
+        }
+    }
+
+    &-erorr {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: start;
+        color: #EA0F0F;
+        margin-top: 4px;
+        &:before {
+            content: "";
+            display: block;
+            background: url("../../img/error.png") no-repeat center;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin: 0 4px 0 0;
+        }
+    }
+
+}

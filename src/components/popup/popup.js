@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import popupStyles from "./popupStyle.scss";
-
+import { useSite } from "../../context/SiteContext";
+import PopuModalHead from "./PopupModalHead";
 
 function Popup(props) {
-
+  const { isSubmitting } = useSite();
 
   const closeHandler = () => {
     props.onClose(false);
@@ -19,10 +20,11 @@ function Popup(props) {
             x
           </span>
         </div>
-        <div className="title">
-          <h1>{props.title}</h1>
-        </div>
-        <div className="description"><p>{props.description}</p></div>
+        {!isSubmitting ? (
+          <PopuModalHead title={props.title} description={props.description} />
+        ) : (
+          <></>
+        )}
         <div className="modalContent">{props.children}</div>
       </div>
     </div>
