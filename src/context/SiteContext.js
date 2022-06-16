@@ -11,10 +11,17 @@ export const SiteProvider = ({ children }) => {
   const [modelShow, setModelShow] = useState(true);
   const [data, setData] = useState();
   const [headline, setHeadline] = useState("NEW STUFF");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [description, setDescription] = useState(
     "Sign up for our newsletter and get 15% off your first order!"
   );
   const [sucessMessage, setSucessMessage] = useState("Success");
+
+  const [valueData, setValueData] = useState({});
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     axios.get("https://apiv2.popupsmart.com/api/googlefont").then((res) => {
       const value = res.data.filter((item) => item.category !== "monospace");
@@ -32,6 +39,16 @@ export const SiteProvider = ({ children }) => {
     setDescription,
     sucessMessage,
     setSucessMessage,
+    name,
+    setName,
+    email,
+    setEmail,
+    valueData,
+    setValueData,
+    errors,
+    setErrors,
+    isSubmitting,
+    setIsSubmitting,
   };
   return <siteContext.Provider value={values}>{children}</siteContext.Provider>;
 };
