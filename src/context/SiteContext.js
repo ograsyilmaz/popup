@@ -11,8 +11,8 @@ export const SiteProvider = ({ children }) => {
   const [modelShow, setModelShow] = useState(true);
   const [data, setData] = useState();
   const [headline, setHeadline] = useState("NEW STUFF");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+
+
   const [description, setDescription] = useState(
     "Sign up for our newsletter and get 15% off your first order!"
   );
@@ -39,10 +39,7 @@ export const SiteProvider = ({ children }) => {
     setDescription,
     sucessMessage,
     setSucessMessage,
-    name,
-    setName,
-    email,
-    setEmail,
+
     valueData,
     setValueData,
     errors,
