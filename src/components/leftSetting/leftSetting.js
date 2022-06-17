@@ -40,13 +40,7 @@ const LeftSetting = () => {
             onChange={(e) => descriptionChange(e.target.value)}
             name="description"
             className="leftSetting-Form-Item-Input InputBig"></textarea>
-          {/* <input
-            type="text"
-            value={description}
-            onChange={(e) => descriptionChange(e.target.value)}
-            name="description"
-            className="leftSetting-Form-Item-Input InputBig"
-          /> */}
+          
         </div>
         <div className="leftSetting-Form-Success leftSetting-Form-Item-Position">
           <p className="leftSetting-Form-Item-Title">Sucess Message</p>

@@ -15,8 +15,6 @@ export default function validate(values) {
     errors.fontName = "Font is required";
     errors.count++;
   }
-  //    else if (values.password.length < 8) {
-  //     errors.password = "Password must be 8 or more characters";
-  //   }
+ 
   return errors;
 }

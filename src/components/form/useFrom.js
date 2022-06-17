@@ -10,6 +10,7 @@ const useForm = (callback, validate) => {
     isSubmitting,
     setIsSubmitting,
   } = useSite();
+  
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
       callback();
@@ -20,11 +21,7 @@ const useForm = (callback, validate) => {
     if (event) event.preventDefault();
     const errorData = validate(valueData);
     if (errorData.count === 0) {
-      // const localData = {
-      //   name: valueData.name,
-      //   email:valueData.email,
-      //   Font:valueData.fontName
-      // };
+    
       setIsSubmitting(true);
       localStorage.setItem("data", JSON.stringify(valueData));
     }

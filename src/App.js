@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import Popup from "./components/popup/popup";
 import LeftSetting from "./components/leftSetting/leftSetting";
 import { useSite } from "./context/SiteContext";
@@ -7,8 +7,8 @@ import Form from "./components/form/form";
 import SucessForm from "./components/form/SucessForm";
 
 function App() {
-  const { modelShow, setModelShow, data, isSubmitting } = useSite();
-  const { headline, description, sucessMessage } = useSite();
+  const { modelShow, setModelShow, isSubmitting } = useSite();
+  const { headline, description } = useSite();
 
   const popupCloseHandler = (e) => {
     setModelShow(e);
@@ -27,7 +27,7 @@ function App() {
             description={description}
           >
             {!isSubmitting ? <Form /> : <SucessForm />}
-            {/* <Form/> */}
+           
           </Popup>
         )}
       </div>
