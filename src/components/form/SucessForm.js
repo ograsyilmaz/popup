@@ -1,6 +1,7 @@
 import React from "react";
 import SucessPng from "../../img/sucess.png";
 import { useSite } from "../../context/SiteContext";
+import "./formStyle.scss";
 
 export default function SucessForm() {
   const { sucessMessage } = useSite();
